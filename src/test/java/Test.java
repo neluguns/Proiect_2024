@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import pages.LoginAccount;
 import pages.NewUser;
 
 public class Test extends BaseTest {
@@ -17,14 +18,26 @@ public class Test extends BaseTest {
         NewUser newUser = new NewUser(driver);
         newUser.clickNewUser();
         Thread.sleep(1000);
-        newUser.registerWithInformation("Ioan","Arcalean","DemoTester","TestingZone");
+        newUser.registerWithInformation("Ioan","Arcalean","DemoTester","!IoanEBos_99");
         Thread.sleep(1000);
         newUser.clickCaptcha();
         Thread.sleep(5000);
         newUser.clickRegister();
+    }
 
+    @org.testng.annotations.Test
+    public void LogIntoAccount() throws InterruptedException {
+        LoginAccount loginAccount = new LoginAccount(driver);
+        loginAccount.login("Mariella", "!IoanEBos_99"); //the .login section
+        System.out.println("Login successful!");
+        Thread.sleep(2000);
 
     }
 
 
-}
+//    @org.testng.annotations.Test
+//    public void LogOutFromAccount(){}
+
+    }
+
+

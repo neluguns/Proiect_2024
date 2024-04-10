@@ -38,7 +38,4 @@ public class NewUser {
         WebElement buttonClickRegister = driver.findElement(By.xpath("//*[@id=\"register\"]"));
         buttonClickRegister.click();
     }
-
-
-
 }
