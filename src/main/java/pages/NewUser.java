@@ -34,7 +34,10 @@ public class NewUser {
         buttonClickCaptcha.click();
     }
 
-
+    public void clickRegister(){
+        WebElement buttonClickRegister = driver.findElement(By.xpath("//*[@id=\"register\"]"));
+        buttonClickRegister.click();
+    }
 
 
 
