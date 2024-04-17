@@ -7,7 +7,7 @@ public class LogoutAccount {
     private WebDriver driver;
 
     //Constructor
-    public  LogoutAccount(Webdriver driver) {
+    public  LogoutAccount(WebDriver driver) {
         this.driver = driver;
     }
 
