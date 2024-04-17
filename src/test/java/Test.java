@@ -1,5 +1,6 @@
 import org.testng.Assert;
 import pages.LoginAccount;
+import pages.LogoutAccount;
 import pages.NewUser;
 
 public class Test extends BaseTest {
@@ -25,15 +26,19 @@ public class Test extends BaseTest {
     @org.testng.annotations.Test
     public void LogIntoAccount() throws InterruptedException {
         LoginAccount loginAccount = new LoginAccount(driver);
-        loginAccount.login("Mariella", "!IoanEBos_99"); //the .login section
+        loginAccount.login("Mariella", "!IoanEBos_99"); //the .login section info
         System.out.println("Login successful!");
         Thread.sleep(2000);
 
     }
 
 
-//    @org.testng.annotations.Test
-//    public void LogOutFromAccount(){}
+    @org.testng.annotations.Test
+    public void LogOutFromAccount() throws InterruptedException {
+        LogoutAccount logoutAccount = new LogoutAccount(driver);
+        logoutAccount.logout;
+        Thread.sleep(1000);
+    }
 
     }
 
