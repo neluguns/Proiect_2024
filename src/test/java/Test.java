@@ -8,8 +8,7 @@ public class Test extends BaseTest {
     @org.testng.annotations.Test //This is a test for the login function on the website
     public void LogIntoAccount() throws InterruptedException {
         LoginAccount loginAccount = new LoginAccount(driver);
-        loginAccount.login("Mariella", "!IoanEBos_99");
-        //the .login section info for an already created account
+        loginAccount.login("Mariella", "!IoanEBos_99"); //the .login section info for a created account
         System.out.println("Login successful!");
         Thread.sleep(5000);
         //Test works with no issues until here
@@ -19,11 +18,11 @@ public class Test extends BaseTest {
     public void LogOutFromAccount() throws InterruptedException {
         LoginAccount loginAccount = new LoginAccount(driver);
         loginAccount.login("Mariella", "!IoanEBos_99");
-        //the .login section info for an already created account
+        //the .login section info for a created account
         System.out.println("Login successful!");
         Thread.sleep(5000);
         LogoutAccount logoutAccount = new LogoutAccount(driver);
-        logoutAccount.logout(); // not working yet
+        logoutAccount.logout(); 
         System.out.println("Logout successful!");
         Thread.sleep(1000);
         //Test works with no issues until here
