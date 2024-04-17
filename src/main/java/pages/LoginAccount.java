@@ -17,7 +17,7 @@ public class LoginAccount{
     //Find the username and password fields and the login button
         WebElement usernameField = driver.findElement(By.id("userName"));
         WebElement passwordField = driver.findElement(By.id("password"));
-        WebElement loginButton = driver.findElement(By.className("btn btn-primary"));
+        WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login\"]"));
     // Enter the username and password
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);

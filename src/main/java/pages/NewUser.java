@@ -22,7 +22,7 @@ public class NewUser {
         WebElement firstName_locator = driver.findElement(By.xpath("//*[@id=\"firstname\"]"));
         WebElement lastName_locator = driver.findElement(By.xpath("//*[@id=\"lastname\"]"));
         WebElement userName_locator = driver.findElement(By.xpath("//*[@id=\"userName\"]"));
-        WebElement password_locator = driver.findElement(By.cssSelector("#password"));
+        WebElement password_locator = driver.findElement(By.xpath("//*[@id=\"password\"]"));
         firstName_locator.sendKeys(firstName);
         lastName_locator.sendKeys(lastName);
         userName_locator.sendKeys(userName);
@@ -30,7 +30,7 @@ public class NewUser {
     }
 
     public void clickCaptcha(){
-        WebElement buttonClickCaptcha = driver.findElement(By.className("recaptcha-checkbox-border"));
+        WebElement buttonClickCaptcha = driver.findElement(By.xpath("//*[@id=\"recaptcha-anchor\"]"));
         buttonClickCaptcha.click();
     }
 

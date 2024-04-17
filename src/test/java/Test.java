@@ -17,7 +17,7 @@ public class Test extends BaseTest {
         newUser.clickNewUser();
         Thread.sleep(1000);
         newUser.registerWithInformation("Ioan","Arcalean","DemoTester","!IoanEBos_99");
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         newUser.clickCaptcha();
         Thread.sleep(5000);
         newUser.clickRegister();
@@ -26,10 +26,11 @@ public class Test extends BaseTest {
     @org.testng.annotations.Test
     public void LogIntoAccount() throws InterruptedException {
         LoginAccount loginAccount = new LoginAccount(driver);
-        loginAccount.login("Mariella", "!IoanEBos_99"); //the .login section info
+        loginAccount.login("Mariella", "!IoanEBos_99");
+        //the .login section info for a already created account
         System.out.println("Login successful!");
         Thread.sleep(2000);
-
+        //Test works with no issues until here
     }
 
 
