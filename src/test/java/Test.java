@@ -22,7 +22,7 @@ public class Test extends BaseTest {
         System.out.println("Login successful!");
         Thread.sleep(5000);
         LogoutAccount logoutAccount = new LogoutAccount(driver);
-        logoutAccount.logout(); 
+        logoutAccount.logout();
         System.out.println("Logout successful!");
         Thread.sleep(1000);
         //Test works with no issues until here
