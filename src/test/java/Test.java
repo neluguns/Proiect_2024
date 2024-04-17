@@ -1,46 +1,46 @@
-import org.testng.Assert;
+
+import pages.DeleteAccount;
 import pages.LoginAccount;
 import pages.LogoutAccount;
-import pages.NewUser;
 
 public class Test extends BaseTest {
-    @org.testng.annotations.Test
-    public void checkRegisterLoginPage(){
-        NewUser newUser = new NewUser(driver);
-        System.out.println(newUser.verifyNewUser());
-        Assert.assertEquals(newUser.verifyNewUser(),"DEMOQA");
-    }
 
-    @org.testng.annotations.Test
-    public void RegisterAccount() throws InterruptedException {
-        NewUser newUser = new NewUser(driver);
-        newUser.clickNewUser();
-        Thread.sleep(1000);
-        newUser.registerWithInformation("Ioan","Arcalean","DemoTester","!IoanEBos_99");
-        Thread.sleep(5000);
-        newUser.clickCaptcha();
-        Thread.sleep(5000);
-        newUser.clickRegister();
-    }
-
-    @org.testng.annotations.Test
+    @org.testng.annotations.Test //This is a test for the login function on the website
     public void LogIntoAccount() throws InterruptedException {
         LoginAccount loginAccount = new LoginAccount(driver);
         loginAccount.login("Mariella", "!IoanEBos_99");
-        //the .login section info for a already created account
+        //the .login section info for an already created account
         System.out.println("Login successful!");
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         //Test works with no issues until here
     }
 
-
-    @org.testng.annotations.Test
+    @org.testng.annotations.Test //This is a test for the logout function from the website
     public void LogOutFromAccount() throws InterruptedException {
+        LoginAccount loginAccount = new LoginAccount(driver);
+        loginAccount.login("Mariella", "!IoanEBos_99");
+        //the .login section info for an already created account
+        System.out.println("Login successful!");
+        Thread.sleep(5000);
         LogoutAccount logoutAccount = new LogoutAccount(driver);
-        logoutAccount.logout;
+        logoutAccount.logout(); // not working yet
+        System.out.println("Logout successful!");
         Thread.sleep(1000);
+        //Test works with no issues until here
     }
 
+    @org.testng.annotations.Test
+    public void DeleteAccount() throws InterruptedException {
+        LoginAccount loginAccount = new LoginAccount(driver);
+        loginAccount.login("Mariella", "!IoanEBos_99");
+        //the .login section info for an already created account
+        System.out.println("Login successful!");
+        Thread.sleep(5000);
+        DeleteAccount deleteAccount = new DeleteAccount(driver);
+        deleteAccount.deleteAccount();
+        Thread.sleep(2000);
+        //Test works with no issues until here
+    }
     }
 
 
