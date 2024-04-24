@@ -24,6 +24,4 @@ public class LoginAccount{
     //Click the login button
         loginButton.click();
     }
-
-
 }

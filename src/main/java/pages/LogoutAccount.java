@@ -16,5 +16,4 @@ public class LogoutAccount {
         WebElement logoutButton = driver.findElement(By.xpath("//*[@id=\"submit\"]"));
         logoutButton.click();
     }
-
 }

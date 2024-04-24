@@ -33,7 +33,7 @@ public class Test extends BaseTest {
         LoginAccount loginAccount = new LoginAccount(driver);
         loginAccount.login("Mariella", "!IoanEBos_99");
         //the .login section info for an already created account
-        System.out.println("Login successful!");
+        System.out.println("Account deleted successfully!");
         Thread.sleep(5000);
         DeleteAccount deleteAccount = new DeleteAccount(driver);
         deleteAccount.deleteAccount();
@@ -41,5 +41,3 @@ public class Test extends BaseTest {
         //Test works with no issues until here
     }
     }
-
-

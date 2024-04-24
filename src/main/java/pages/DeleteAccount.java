@@ -12,6 +12,4 @@ public class DeleteAccount {
         WebElement deleteAcc = driver.findElement(By.xpath("//*[@id=\"submit\"]"));
         deleteAcc.click();
     }
-
-
 }
